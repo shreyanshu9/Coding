@@ -3,7 +3,7 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-class GFG {
+class SticklerThief {
 public static void main(String[] args) throws NumberFormatException, IOException {
         // TODO Auto-generated method stub
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
