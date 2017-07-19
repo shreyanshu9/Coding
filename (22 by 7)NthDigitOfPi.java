@@ -28,5 +28,17 @@ public class NthDigitOfPi {
 		
 		return digit;
 	}
+	
+	private static int getPiDigit(int n) {
+		// TODO Auto-generated method stub
+		double pi = Math.PI;
+		System.out.println(pi);
+		int digit = 3;
+		for (int i = 1; i < n; i++) {
+			pi = (pi - digit) * 10;
+			digit = (int)pi;
+		}
+		return digit;
+	}
 
 }
