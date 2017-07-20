@@ -1,3 +1,4 @@
+//http://practice.geeksforgeeks.org/problems/camelcase-pattern-matching/0
 package geeks;
 
 import java.io.BufferedReader;
@@ -24,7 +25,6 @@ public class CamelCasePatternMatching {
 			for (int i = 0; i < n; i++) {
 				vector.addElement(st.nextToken());
 			}
-			 Collections.sort(vector);
 			 pattern = br.readLine();
 			 findPattern(vector, pattern, n);
 		}
@@ -36,28 +36,36 @@ public class CamelCasePatternMatching {
 		boolean check = true;
 		int patternLength = pattern.length();
 		ArrayList<String> ar = new ArrayList<String>();
-		Enumeration loop = vector.elements();
+		int i = 0;
+		String array[] = new String[n];
+		Enumeration<String> loop = vector.elements();
 		while (loop.hasMoreElements()) {
 			String currentElement = (String)loop.nextElement();
-			String thisElement = currentElement.replaceAll("[a-z]", "");
-			if (thisElement.length() >= patternLength) {
-				thisElement = thisElement.substring(0, patternLength);
+			String elementPattern = currentElement.replaceAll("[a-z]", "");
+			String elementRealPattern = elementPattern;
+			if (elementPattern.length() >= patternLength) {
+				elementPattern = elementPattern.substring(0, patternLength);
 			}
-			if (thisElement.equals(pattern)) {
-			    ar.add(currentElement);
+			if (elementPattern.equals(pattern)) {
+				ar.add(elementRealPattern + " " + i);
+				array[i] = currentElement;
+				i++;
 				check = false;
 			}
 		}
 		if(check) {
 			System.out.println("No match found");
 		} else {
-			Iterator itr = ar.iterator();
+			Collections.sort(ar);
+			Iterator<String> itr = ar.iterator();
 			while (itr.hasNext()) {
-				System.out.print(itr.next() + " ");
+				String elementData = (String)itr.next();
+				int elementSpace = elementData.indexOf(" ") + 1;
+				String elementValue = elementData.substring(elementSpace, elementData.length());
+				String value = array[Integer.parseInt(elementValue)];
+				System.out.print(value + " ");
 			}
 			System.out.println();
 		}
-		
 	}
-
 }
