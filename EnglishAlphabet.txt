@@ -1,0 +1,44 @@
+English Alphabets
+Given a square matrix of alphabets which contain English letters in arbitrary manner. While searching a word in it, you can go left to right horizontally, vertically downwards or diagonally towards left (both upwards and downwards).
+ 
+You have to find the number of matches of a given word in the matrix.
+
+For example, In the given square matrix {A#A#K,A#S#K,A#K#K},
+                                                            
+                                                                                                                                             
+The word "ASK"  is matched four times in the input matrix. So the output will be 4.
+
+Input Format
+You will be given a function which contains two dimensional string array and a string(Word to be searched) as arguments.
+
+Output Format
+You need to return the Number of occurrences of the word in the matrix {an integer}.
+
+
+Sample Test Case1
+Sample Input
+2
+2
+A S
+S T
+AS
+
+Sample Output
+2
+
+Sample Test Case 2
+Sample Input
+5
+5
+E D E E E
+D I S K E
+E S E E E
+E C E E E
+E E E E E
+DISK
+
+Sample Output
+1
+
+Explanation: 
+In this example, "DISK"  is matched only one time in the input matrix. So the output will be 1.

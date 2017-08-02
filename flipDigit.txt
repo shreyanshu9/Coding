@@ -1,0 +1,6 @@
+Given a binary string. There is a funtion op(3) which means flip the every 3rd digit of the input string.
+Flip means 0 to 1 or 1 to 0.
+
+Input - binary string (eg. 1010101011), and two number.
+
+Output - How many digit remain same after both the flips.
