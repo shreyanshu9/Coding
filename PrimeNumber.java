@@ -3,7 +3,6 @@ package geeks;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 public class PrimeNumber {
 
@@ -23,8 +22,11 @@ public class PrimeNumber {
 		}
 		al[1] = 0;
 		for (int i = 0; i <= number; i++) {
-			while (al[i] == 0) {
+			while (i <= number && al[i] == 0) {
 				i++;
+			}
+			if (i > number) {
+				break;
 			}
 			check = al[i];
 			for (int j = 2; j < i/2; j++) {
