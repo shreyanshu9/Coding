@@ -1,5 +1,0 @@
-Sort an array according to number of occurences.
-
-eg > array - 4 4 2 2 3 2 4 5 6 3
-
-     output - 2 2 2 4 4 4 3 3 5 6 
